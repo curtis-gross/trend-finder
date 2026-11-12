@@ -1,0 +1,12 @@
+{
+  "git.autofetch": false,
+  "git.autorefresh": false,
+  "git.autoStash": false,
+  "git.decorations.enabled": false,
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  }
+}

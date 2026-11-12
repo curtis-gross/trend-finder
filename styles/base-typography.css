@@ -1,0 +1,145 @@
+/*=================================
+  Studio Wordmark & Base Typography
+=================================*/
+.app-wordmark,
+.font-studio-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme="dark"] .app-wordmark,
+html[data-theme="dark"] .app-wordmark *,
+html.dark .app-wordmark,
+html.dark .app-wordmark * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+/*=================================
+  Contrast Guardrails
+=================================*/
+html .keep-white-text,
+html .keep-white-text *,
+html [class*="keep-white-text"],
+html [class*="keep-white-text"] *,
+.keep-white-text,
+.keep-white-text *,
+[class*="keep-white-text"],
+[class*="keep-white-text"] *,
+[class~="keep-white-text"],
+[class~="keep-white-text"] *,
+[class~="text-white"].keep-white-text,
+[class~="text-white"][class*="keep-white-text"],
+.keep-white-text [class~="text-white"],
+[class*="keep-white-text"] [class~="text-white"],
+[class~="bg-[#041E3A]"]:not(:disabled),
+[class~="bg-[#041E3A]"]:not(:disabled) *,
+[class~="bg-slate-900"]:not(:disabled),
+[class~="bg-slate-900"]:not(:disabled) *,
+[class~="bg-slate-950"]:not(:disabled),
+[class~="bg-slate-950"]:not(:disabled) * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/*=================================
+  Typography & Hover Text Contrast in Dark Mode
+=================================*/
+html[data-theme="dark"] .page-title,
+html.dark .page-title {
+  color: #F8F6F0 !important;
+}
+
+html[data-theme="dark"] :is(.text-\[\#0F172A\], .text-\[\#041E3A\], .text-\[var\(--app-navy\)\], .text-\[\#2A2421\], .text-slate-900, .text-slate-800),
+html.dark :is(.text-\[\#0F172A\], .text-\[\#041E3A\], .text-\[var\(--app-navy\)\], .text-\[\#2A2421\], .text-slate-900, .text-slate-800) {
+  color: #F8FAFC !important;
+}
+
+html[data-theme="dark"] .text-slate-600,
+html.dark .text-slate-600 {
+  color: #D8E1EB !important;
+}
+
+html[data-theme="dark"] .text-slate-500,
+html.dark .text-slate-500 {
+  color: #94A3B8 !important;
+}
+
+html[data-theme="dark"] :is(.text-blue-700, .text-indigo-700),
+html.dark :is(.text-blue-700, .text-indigo-700) {
+  color: #93C5FD !important;
+}
+
+html[data-theme="dark"] :is(.text-emerald-700, .text-emerald-800, .text-teal-800),
+html.dark :is(.text-emerald-700, .text-emerald-800, .text-teal-800) {
+  color: #6EE7B7 !important;
+}
+
+html[data-theme="dark"] :is(.text-amber-700, .text-amber-800, .text-amber-900, .text-orange-700, .text-orange-800),
+html.dark :is(.text-amber-700, .text-amber-800, .text-amber-900, .text-orange-700, .text-orange-800) {
+  color: #FCD34D !important;
+}
+
+html[data-theme="dark"] :is(.text-rose-700, .text-rose-800, .text-rose-900, .text-rose-950),
+html.dark :is(.text-rose-700, .text-rose-800, .text-rose-900, .text-rose-950) {
+  color: #FDA4AF !important;
+}
+
+html[data-theme="dark"] :is([class~="hover:text-[var(--app-navy)]"]:hover, [class~="hover:text-[var(--app-text)]"]:hover),
+html[data-theme="dark"] .group:hover :is([class~="group-hover:text-slate-800"], [class~="group-hover:text-slate-700"]),
+html.dark :is([class~="hover:text-[var(--app-navy)]"]:hover, [class~="hover:text-[var(--app-text)]"]:hover),
+html.dark .group:hover :is([class~="group-hover:text-slate-800"], [class~="group-hover:text-slate-700"]) {
+  color: #F8FAFC !important;
+}
+
+/* Light Mode Typography Overrides */
+html[data-theme="light"] .page-title {
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] :is([class~="text-white"], [class~="text-slate-100"]) {
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] [class~="text-slate-200"] {
+  color: #1E293B !important;
+}
+
+html[data-theme="light"] [class~="text-slate-300"] {
+  color: #334155 !important;
+}
+
+html[data-theme="light"] [class~="text-slate-400"] {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] [class~="text-slate-500"] {
+  color: #64748B !important;
+}
+
+html[data-theme="light"] [class~="hover:text-white"]:hover {
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] [class~="text-blue-400"] {
+  color: #041E3A !important;
+}
+
+html[data-theme="light"] :is([class~="text-amber-300"], [class~="text-yellow-400"], [class~="text-orange-300"]) {
+  color: #B45309 !important;
+}
+
+html[data-theme="light"] :is([class~="text-cyan-300"], [class~="text-cyan-400"]) {
+  color: #0E7490 !important;
+}

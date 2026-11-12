@@ -1,0 +1,161 @@
+/*
+ * test-company | Trend Intelligence — Design Tokens & Scrollbar Defaults
+ * THEME: STUDIO LIGHT (#FAF8F5) & MIDNIGHT (#020F1D) / BRAND NAVY (#041E3A)
+ */
+
+html,
+body,
+#root {
+  background-color: #FAF8F5;
+  color: #0F172A;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/*=================================
+  THEME CUSTOM PROPERTIES (:root Light Base + Dark Overrides)
+=================================*/
+:root,
+html[data-theme="light"],
+html.light {
+  color-scheme: light;
+  --app-bg: #FAF8F5;
+  --app-canvas: #FAF8F5;
+  --app-surface: #FFFFFF;
+  --app-card: #FFFFFF;
+  --app-elevated: #F8FAFC;
+  --app-surface-subtle: #FAF8F5;
+  --app-surface-muted: #F3EFEA;
+  --app-hover: #F1F5F9;
+  --app-border: #E2E8F0;
+  --app-border-subtle: #E2E8F0;
+  --app-border-strong: #CBD5E1;
+  --app-text: #0F172A;
+  --app-text-primary: #0F172A;
+  --app-text-secondary: #334155;
+  --app-muted: #475569;
+  --app-text-muted: #475569;
+  --app-navy: #041E3A;
+  --app-navy-hover: #062B54;
+  --app-accent: #0072BC;
+  --app-accent-hover: #0284C7;
+  --app-emerald: #10B981;
+  --app-forest: #065F46;
+  --app-green: #10B981;
+}
+
+/*=================================
+  DARK MODE OVERRIDES (MIDNIGHT #020F1D / BRAND NAVY #041E3A / HOVER #1A222E)
+=================================*/
+:root[data-theme="dark"],
+:root.dark,
+html[data-theme="dark"],
+html.dark {
+  background-color: #020F1D !important;
+  color: #F8F6F0 !important;
+  color-scheme: dark !important;
+  --app-bg: #020F1D;
+  --app-canvas: #020F1D;
+  --app-surface: #041527;
+  --app-card: #041527;
+  --app-elevated: #061C36;
+  --app-surface-subtle: #031222;
+  --app-surface-muted: #061C36;
+  --app-hover: #1A222E;
+  --app-border: rgba(148, 163, 184, 0.16);
+  --app-border-subtle: rgba(148, 163, 184, 0.14);
+  --app-border-strong: rgba(148, 163, 184, 0.26);
+  --app-text: #F8F6F0;
+  --app-text-primary: #F8F6F0;
+  --app-text-secondary: #D8E1EB;
+  --app-muted: #94A3B8;
+  --app-text-muted: #94A3B8;
+  --app-navy: #041E3A;
+  --app-navy-hover: #1A222E;
+  --app-accent: #38BDF8;
+  --app-accent-hover: #0284C7;
+  --app-emerald: #10B981;
+  --app-forest: #065F46;
+  --app-green: #10B981;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] #root,
+html.dark body,
+html.dark #root,
+body.dark {
+  background-color: #020F1D !important;
+  color: #F8F6F0 !important;
+}
+
+html[data-theme="light"],
+html[data-theme="light"] body,
+html[data-theme="light"] #root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FAF8F5 !important;
+  color: #0F172A !important;
+  color-scheme: light !important;
+}
+
+/* Override Tailwind Preflight default #e5e7eb border on bare border/divide utilities */
+html:where([data-theme="dark"], .dark) *,
+html:where([data-theme="dark"], .dark) ::before,
+html:where([data-theme="dark"], .dark) ::after {
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+html[data-theme="dark"] hr,
+html.dark hr {
+  border-color: rgba(148, 163, 184, 0.16) !important;
+}
+
+/* Scrollbars in Dark & Light Mode */
+html[data-theme="dark"] ::-webkit-scrollbar-track,
+html.dark ::-webkit-scrollbar-track {
+  background: #020F1D !important;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb,
+html.dark ::-webkit-scrollbar-thumb {
+  background: #041E3A !important;
+  border-radius: 4px;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover,
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #1A222E !important;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #F3EFEA !important;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #CBD5E1 !important;
+  border-radius: 4px;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8 !important;
+}

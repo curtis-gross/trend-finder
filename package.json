@@ -1,0 +1,45 @@
+{
+  "name": "trend-finder",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:watch": "vite build --watch --emptyOutDir false",
+    "server": "./scripts/server_control.sh start",
+    "dev:server": "./scripts/server_control.sh start",
+    "dev:all": "./start_local.sh --yes",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "start": "./scripts/server_control.sh start",
+    "logs": "./view_logs.sh",
+    "stop": "./stop_server.sh",
+    "restart": "./scripts/server_control.sh restart",
+    "server:status": "./scripts/server_control.sh status",
+    "setup": "./scripts/configure_client.sh",
+    "setup:assist": "python3 scripts/setup_assistant.py",
+    "setup:gcp": "./scripts/gcp_setup.sh",
+    "setup:check": "./scripts/gcp_preflight.sh",
+    "audit:privacy": "./scripts/audit_privacy.sh",
+    "export:client": "./scripts/export_clean_release.sh"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.2.0",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.6.0",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^22.14.0",
+    "@types/recharts": "^1.8.29",
+    "jsdom": "^29.0.1",
+    "typescript": "~5.8.2",
+    "vitest": "^4.1.0"
+  }
+}

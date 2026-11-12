@@ -1,0 +1,179 @@
+/*=================================
+  Layout, Sidebar & Cockpit Surfaces
+=================================*/
+.app-container {
+  min-height: 100vh;
+  background-color: #FAF8F5;
+  color: #0F172A;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  background-color: #FAF8F5;
+  color: #0F172A;
+}
+
+.nav-sidebar {
+  height: 100vh;
+  height: 100dvh;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  width: 18rem;
+  z-index: 40;
+  border-right: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .nav-sidebar {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    flex-shrink: 0;
+  }
+  .nav-sidebar.collapsed {
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    border-right-width: 0 !important;
+    border-right-color: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+.page-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/*=================================
+  Dark & Light Surface Remaps
+=================================*/
+html[data-theme="dark"] :is(.app-container, .main-content),
+html.dark :is(.app-container, .main-content) {
+  background-color: #020F1D !important;
+  color: #F8F6F0 !important;
+}
+
+html[data-theme="dark"] :is(.nav-sidebar:not(.collapsed), .page-header),
+html.dark :is(.nav-sidebar:not(.collapsed), .page-header) {
+  background-color: #020F1D !important;
+  color: #F8F6F0 !important;
+  border-color: #041E3A !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-[var(--app-canvas)]"], [class~="bg-[#FAF8F5]"], [class~="bg-[#F8F6F1]"], [class~="bg-[#F7F8FA]"], [class~="bg-[#020F1D]"], [class~="bg-slate-50"]),
+html.dark :is([class~="bg-[var(--app-canvas)]"], [class~="bg-[#FAF8F5]"], [class~="bg-[#F8F6F1]"], [class~="bg-[#F7F8FA]"], [class~="bg-[#020F1D]"], [class~="bg-slate-50"]) {
+  background-color: #020F1D !important;
+}
+
+html[data-theme="dark"] :is(.bg-white, [class~="bg-[#FFFFFF]"], [class~="bg-white/95"], [class~="bg-[var(--app-surface)]"], [class*="bg-[var(--app-surface)]/"], [class~="bg-[var(--app-card)]"], [class*="bg-[var(--app-card)]/"]),
+html.dark :is(.bg-white, [class~="bg-[#FFFFFF]"], [class~="bg-white/95"], [class~="bg-[var(--app-surface)]"], [class*="bg-[var(--app-surface)]/"], [class~="bg-[var(--app-card)]"], [class*="bg-[var(--app-card)]/"]) {
+  background-color: #041527 !important;
+}
+
+html[data-theme="dark"] [class~="bg-slate-100"],
+html.dark [class~="bg-slate-100"] {
+  background-color: #05182E !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-slate-200"], [class~="bg-zinc-200"]),
+html.dark :is([class~="bg-slate-200"], [class~="bg-zinc-200"]) {
+  background-color: #061C36 !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-blue-50"], [class*="bg-blue-50/"], [class~="bg-sky-50"], [class~="bg-cyan-50"], [class~="bg-indigo-50"]),
+html.dark :is([class~="bg-blue-50"], [class*="bg-blue-50/"], [class~="bg-sky-50"], [class~="bg-cyan-50"], [class~="bg-indigo-50"]) {
+  background-color: #041E3A !important;
+}
+
+html[data-theme="dark"] [class~="bg-emerald-50"],
+html.dark [class~="bg-emerald-50"] {
+  background-color: rgba(6, 78, 59, 0.35) !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-amber-50"], [class~="bg-amber-100"], [class~="bg-yellow-50"], [class~="bg-orange-50"], [class~="bg-orange-100"]),
+html.dark :is([class~="bg-amber-50"], [class~="bg-amber-100"], [class~="bg-yellow-50"], [class~="bg-orange-50"], [class~="bg-orange-100"]) {
+  background-color: rgba(120, 53, 15, 0.32) !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-rose-50"], [class*="bg-rose-50/"]),
+html.dark :is([class~="bg-rose-50"], [class*="bg-rose-50/"]) {
+  background-color: rgba(127, 29, 29, 0.35) !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-purple-50"], [class*="bg-violet-50/"], [class~="bg-violet-100"]),
+html.dark :is([class~="bg-purple-50"], [class*="bg-violet-50/"], [class~="bg-violet-100"]) {
+  background-color: rgba(76, 29, 149, 0.32) !important;
+}
+
+html[data-theme="dark"] :is([class~="bg-[#041E3A]"], [class~="dark:bg-[#041E3A]"]),
+html.dark :is([class~="bg-[#041E3A]"], [class~="dark:bg-[#041E3A]"]) {
+  background-color: #041E3A !important;
+}
+
+html[data-theme="dark"] .nav-sidebar :is([class~="bg-[#041E3A]"], [class~="dark:bg-[#041E3A]"], [class~="bg-[#041E3A]/8"], [class~="bg-[#041E3A]/12"]),
+html.dark .nav-sidebar :is([class~="bg-[#041E3A]"], [class~="dark:bg-[#041E3A]"], [class~="bg-[#041E3A]/8"], [class~="bg-[#041E3A]/12"]) {
+  background-color: #041E3A !important;
+  color: #FFFFFF !important;
+  border-color: #041E3A !important;
+}
+
+html[data-theme="dark"] .nav-sidebar :is([class~="bg-[#041E3A]"], [class~="dark:bg-[#041E3A]"], [class~="bg-[#041E3A]/8"], [class~="bg-[#041E3A]/12"]) *,
+html.dark .nav-sidebar :is([class~="bg-[#041E3A]"], [class~="dark:bg-[#041E3A]"], [class~="bg-[#041E3A]/8"], [class~="bg-[#041E3A]/12"]) * {
+  color: #FFFFFF !important;
+}
+
+/* Light Mode Surface Overrides */
+html[data-theme="light"] :is(.app-container, .main-content) {
+  background-color: #FAF8F5 !important;
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] .nav-sidebar {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-right: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04) !important;
+}
+
+html[data-theme="light"] .nav-sidebar.collapsed {
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  border-right: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}

@@ -1,0 +1,63 @@
+/*=================================
+  Layout Utilities
+=================================*/
+.max-w-7xl {
+  max-width: 110rem !important;
+}
+
+/*=================================
+  Container Borders, Dividers & Rings
+=================================*/
+html[data-theme="dark"] :is([class*="border-white/"], [class~="border-slate-300"], [class*="border-zinc-400/"], [class~="border-[var(--app-border)]"], [class~="border-[#E2E8F0]"], [class~="border-[#CBD5E1]"], [class*="border-[#041E3A]/"], [class~="border-blue-200"], [class~="border-sky-200"], [class~="border-indigo-200"], [class~="border-purple-200"], [class~="border-violet-200"], [class*="border-violet-200/"], [class~="border-emerald-200"], [class~="border-amber-200"], [class~="border-orange-200"], [class*="border-orange-200/"], [class~="border-rose-200"]),
+html.dark :is([class*="border-white/"], [class~="border-slate-300"], [class*="border-zinc-400/"], [class~="border-[var(--app-border)]"], [class~="border-[#E2E8F0]"], [class~="border-[#CBD5E1]"], [class*="border-[#041E3A]/"], [class~="border-blue-200"], [class~="border-sky-200"], [class~="border-indigo-200"], [class~="border-purple-200"], [class~="border-violet-200"], [class*="border-violet-200/"], [class~="border-emerald-200"], [class~="border-amber-200"], [class~="border-orange-200"], [class*="border-orange-200/"], [class~="border-rose-200"]) {
+  border-color: rgba(148, 163, 184, 0.16) !important;
+}
+
+html[data-theme="light"] [class*="border-[var(--app-border)]"],
+html:not([data-theme="dark"]):not(.dark) [class*="border-[var(--app-border)]"] {
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+html[data-theme="dark"] .animate-spin[class~="border-t-[#041E3A]"],
+html.dark .animate-spin[class~="border-t-[#041E3A]"] {
+  border-top-color: #94A3B8 !important;
+}
+
+html[data-theme="dark"] :is([class~="divide-slate-200"], [class~="divide-y"]) > :not([hidden]) ~ :not([hidden]),
+html.dark :is([class~="divide-slate-200"], [class~="divide-y"]) > :not([hidden]) ~ :not([hidden]) {
+  border-color: #041E3A !important;
+}
+
+html[data-theme="dark"] [class*="ring-white/"],
+html.dark [class*="ring-white/"] {
+  --tw-ring-color: #041E3A !important;
+}
+
+/*=================================
+  Subtle Dark Gray Hover Effect -> #1A222E
+=================================*/
+html[data-theme="dark"] :is([class~="hover:bg-slate-50"]:hover, [class~="hover:bg-slate-100"]:hover, [class*="hover:bg-slate-100/"]:hover, [class~="hover:bg-slate-200"]:hover, [class*="hover:bg-slate-200/"]:hover, [class~="hover:bg-[var(--app-surface)]"]:hover, [class~="hover:bg-[var(--app-card)]"]:hover, [class*="hover:bg-blue-50/"]:hover, [class~="hover:bg-blue-100"]:hover, [class~="hover:bg-sky-50"]:hover, [class~="hover:bg-emerald-100"]:hover, [class~="hover:bg-rose-100"]:hover),
+html[data-theme="dark"] .group:hover [class~="group-hover:bg-slate-200"],
+html.dark :is([class~="hover:bg-slate-50"]:hover, [class~="hover:bg-slate-100"]:hover, [class*="hover:bg-slate-100/"]:hover, [class~="hover:bg-slate-200"]:hover, [class*="hover:bg-slate-200/"]:hover, [class~="hover:bg-[var(--app-surface)]"]:hover, [class~="hover:bg-[var(--app-card)]"]:hover, [class*="hover:bg-blue-50/"]:hover, [class~="hover:bg-blue-100"]:hover, [class~="hover:bg-sky-50"]:hover, [class~="hover:bg-emerald-100"]:hover, [class~="hover:bg-rose-100"]:hover),
+html.dark .group:hover [class~="group-hover:bg-slate-200"] {
+  background-color: #1A222E !important;
+}
+
+/* Soften Hover Borders -> #0A2B52 */
+html[data-theme="dark"] :is([class~="hover:border-[#041E3A]"]:hover, [class~="hover:border-slate-300"]:hover, [class~="hover:border-sky-200"]:hover, [class~="hover:border-emerald-200"]:hover, [class~="hover:border-rose-200"]:hover, [class~="hover:border-[var(--app-border)]"]:hover),
+html.dark :is([class~="hover:border-[#041E3A]"]:hover, [class~="hover:border-slate-300"]:hover, [class~="hover:border-sky-200"]:hover, [class~="hover:border-emerald-200"]:hover, [class~="hover:border-rose-200"]:hover, [class~="hover:border-[var(--app-border)]"]:hover) {
+  border-color: #0A2B52 !important;
+}
+
+/* Light Mode Precision Remaps */
+html[data-theme="light"] [class~="bg-[#041E3A]/8"] {
+  background-color: rgba(4, 30, 58, 0.08) !important;
+}
+
+html[data-theme="light"] [class~="bg-[#041E3A]/12"] {
+  background-color: rgba(4, 30, 58, 0.12) !important;
+}
+
+html[data-theme="light"] [class~="border-[#041E3A]/25"] {
+  border-color: rgba(4, 30, 58, 0.25) !important;
+}

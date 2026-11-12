@@ -1,0 +1,126 @@
+/*=================================
+  Buttons & Controls
+=================================*/
+.btn-primary {
+  background-color: #041E3A;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px -1px rgba(4, 30, 58, 0.25);
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #062B54;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #CBD5E1;
+  color: #64748B;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/*=================================
+  Data Tables
+=================================*/
+.data-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background-color: #F8FAFC;
+  color: #475569;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.data-table td {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  color: #0F172A;
+  font-size: 0.875rem;
+}
+
+.data-table tr:hover {
+  background-color: #F8FAFC;
+}
+
+/*=================================
+  Dark Mode Tables & Buttons
+=================================*/
+html[data-theme="dark"] .data-table th,
+html.dark .data-table th {
+  background-color: #031222 !important;
+  color: #94A3B8 !important;
+  border-color: #041E3A !important;
+}
+
+html[data-theme="dark"] .data-table td,
+html.dark .data-table td {
+  background-color: #041527 !important;
+  color: #F8F6F0 !important;
+  border-color: #041E3A !important;
+}
+
+html[data-theme="dark"] :is(.data-table tr:hover, .data-table tr:hover td),
+html.dark :is(.data-table tr:hover, .data-table tr:hover td) {
+  background-color: #1A222E !important;
+}
+
+html[data-theme="dark"] .btn-primary,
+html.dark .btn-primary {
+  background-color: #041E3A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #0A2B52 !important;
+}
+
+html[data-theme="dark"] .btn-primary:hover,
+html.dark .btn-primary:hover {
+  background-color: #062B54 !important;
+}
+
+/*=================================
+  Light Mode Tables & Buttons
+=================================*/
+html[data-theme="light"] .btn-primary {
+  background-color: #041E3A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px -1px rgba(4, 30, 58, 0.25) !important;
+}
+
+html[data-theme="light"] .btn-primary:hover {
+  background-color: #062B54 !important;
+}
+
+html[data-theme="light"] .btn-primary:disabled {
+  background-color: #CBD5E1 !important;
+  color: #64748B !important;
+}
+
+html[data-theme="light"] .data-table th {
+  background-color: #F8FAFC !important;
+  color: #475569 !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+html[data-theme="light"] .data-table td {
+  border-bottom: 1px solid #E2E8F0 !important;
+  color: #0F172A !important;
+}

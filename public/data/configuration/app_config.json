@@ -1,0 +1,33 @@
+{
+  "branding": {
+    "companyName": "test-company",
+    "workspaceName": "test-company",
+    "logo": "",
+    "colors": {
+      "primary": "#0F172A",
+      "secondary": "#F3EFEA",
+      "accent": "#0072BC"
+    },
+    "metaTitle": "test-company | Trend Intelligence",
+    "metaDescription": "Trend Intelligence and Deep Media Listening platform for test-company",
+    "industryType": "Enterprise"
+  },
+  "defaultMode": "INSIGHTS",
+  "sidebarDefaultHidden": false,
+  "navigation": [
+    {
+      "id": "INSIGHTS",
+      "label": "Trend Intelligence",
+      "icon": "Radar",
+      "visible": true,
+      "category": "workflow"
+    },
+    {
+      "id": "FILTER_PIPELINE",
+      "label": "Filter Pipeline",
+      "icon": "Filter",
+      "visible": true,
+      "category": "workflow"
+    }
+  ]
+}
